@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-hw-04-images/static/css/main.bc2b2020.css",
+    "main.js": "/react-hw-04-images/static/js/main.bc15d72d.js",
+    "index.html": "/react-hw-04-images/index.html",
+    "static/media/search.svg": "/react-hw-04-images/static/media/search.0862f3e5cfce1c84b7727527e0d37ffb.svg",
+    "main.bc2b2020.css.map": "/react-hw-04-images/static/css/main.bc2b2020.css.map",
+    "main.bc15d72d.js.map": "/react-hw-04-images/static/js/main.bc15d72d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc2b2020.css",
+    "static/js/main.bc15d72d.js"
+  ]
+}
