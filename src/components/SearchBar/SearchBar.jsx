@@ -10,7 +10,7 @@ const SearchBar = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (input.trim() === '') {
-      toast.error('Enter query');
+      toast.warn('Enter a valid request')
       return;
     }
     onSubmit(input);

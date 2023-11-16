@@ -3,7 +3,7 @@ import { AppWrap } from './App.styled';
 import SearchBar from 'components/SearchBar/SearchBar';
 import ImageGallery from 'components/ImageGallery/ImageGallery';
 import { useEffect } from 'react';
-import { fetchApi, getImages } from 'services/pixabayAPI';
+import { fetchApi } from 'services/pixabayAPI';
 import { toast, ToastContainer } from 'react-toastify';
 import { getNormalizeImages } from 'helpers/normalizeImages';
 import Loader from 'components/Loader/Loader';
@@ -23,7 +23,11 @@ export const App = () => {
     }
     fetchApi(searchQuery, page)
       .then(({hits, totalHits}) => {
+
         setImages(prevImages => [...prevImages, ...getNormalizeImages(hits)]);
+        if (!totalHits) {
+          toast.error(`No images found for your request '${searchQuery}'`)
+        }
         setTotalHits(totalHits);
       })
       .catch(error => {
